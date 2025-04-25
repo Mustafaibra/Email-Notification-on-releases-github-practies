@@ -26,6 +26,6 @@ RUN apk add --no-cache --update libmagic && \
 USER licenseware:licenseware
 
 COPY send-email.py ./
-
+RUN chmod +x ./send-email.py
 ENTRYPOINT ["/licenseware/send-email.py"]
 CMD ["--help"]
