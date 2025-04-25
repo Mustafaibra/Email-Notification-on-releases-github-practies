@@ -23,8 +23,16 @@ RUN apk add --no-cache --update libmagic && \
   pip install --no-cache /wheels/* && \
   rm -rf /wheels
 
-COPY --chmod=+x send-email.py ./
 
 
+
+COPY send-email.py /licenseware/
+RUN chmod +x /licenseware/send-email.py
+
+
+RUN ls -la /licenseware/send-email.py
+
+
+USER licenseware
 ENTRYPOINT ["/licenseware/send-email.py"]
 CMD ["--help"]
