@@ -4,6 +4,6 @@ ENV PYTHONUNBUFFERED 1
 
 RUN pip install -U pip
 COPY . . 
-
+RUN chmod +x /send-email.py  
 RUN pip install -r requirements.txt
 ENTRYPOINT ["/send-email.py"]
