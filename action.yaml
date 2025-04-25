@@ -3,13 +3,7 @@ name: send email notifiaction on any release
 decsciption: 
   This action sends an email notification when a new release is created in the repository.
   It uses the `actions/github-script` action to send the email using the SendGrid API.
-  The action is triggered on the `release` event with the `published` type.
-  The action requires the following inputs:
-    - SENDGRID_API_KEY: The SendGrid API key to use for sending the email.
-    - TO_EMAIL: The email address to send the notification to.
-    - FROM_EMAIL: The email address to send the notification from.
-    - SUBJECT: The subject of the email notification.
-    - BODY: The body of the email notification.
+ 
 
 branding:
   icon: mail
