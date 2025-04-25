@@ -27,5 +27,5 @@ USER licenseware:licenseware
 
 COPY send-email.py ./
 
-ENTRYPOINT ["/send-email.py"]
+ENTRYPOINT ["/licenseware/send-email.py"]
 CMD ["--help"]
